@@ -2,6 +2,69 @@
 <html>
 <head>
   <title>Beralih ke Akun Instagram</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Responsif untuk perangkat Android */
+    @media only screen and (max-width: 480px) {
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .loading-bar {
+      width: 200px;
+      height: 20px;
+      border: 1px solid #ccc;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .loading-bar:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: #3F51B5;
+      animation: loading 2s linear infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        width: 0%;
+      }
+      50% {
+        width: 50%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
   <script>
     setTimeout(function() {
       window.location.href = "https://instagram.com/salad_splash?igshid=NGExMmI2YTkyZg==";
@@ -9,9 +72,8 @@
   </script>
 </head>
 <body>
+  <div class="loading-bar"></div>
   <h1>Selamat Datang di Halaman Saya</h1>
-  
   <p>Tunggu sebentar, Anda akan dialihkan ke profil Instagram saya secara otomatis...</p>
-  
 </body>
 </html>
